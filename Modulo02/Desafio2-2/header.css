@@ -1,0 +1,52 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+
+    background-color: rgb(24, 24, 27);
+    box-shadow: 0px 1px 1px 1px #0c0909;
+}
+header #icon {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header #icon:hover {
+    transition: 500ms;
+    filter: invert(17%) sepia(79%) saturate(3895%) hue-rotate(261deg) brightness(96%) contrast(96%);
+}
+
+header #icon img {
+    height: 50%;
+}
+
+header #linkIcon {
+    display: block;
+}
+header ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+header ul li {
+    margin: 0px 50px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header ul li a {
+    text-decoration: none;
+}
+header ul li a:hover {
+    transition: 50ms;
+    color: #772ce8;
+}
