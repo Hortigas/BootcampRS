@@ -1,0 +1,78 @@
+#about {
+    width: 100%;
+    padding: 30px 100px 20px;
+}
+
+#about #info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/media/background.png) 0% 0% / cover fixed, rgb(11, 10, 13);
+
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+#about #info p {
+    margin-bottom: 2em;
+    text-indent: 1.5em;
+}
+
+#about #logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    margin-right: 50px;
+    padding: 30px;
+    border-right: 1px solid white;
+}
+#about #info img {
+    border-radius: 50%;
+    height: 200px;
+    margin-bottom: 50px;
+}
+
+#about #info #empresa {
+    font-weight: bold;
+    font-size: 250%;
+    text-decoration: none;
+}
+
+#about #info h3 {
+    text-align: justify;
+    margin-top: 5vh;
+    height: 100%;
+}
+
+#about #tecnologias {
+    margin-top: 50px;
+    width: 100%;
+}
+#about #tecnologias * {
+    padding: 5px;
+}
+#about #tecnologias h2 {
+    font-size: 36px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#about #tecnologias h3 {
+    color: rgb(221, 213, 248);
+    font-size: 24px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    font-weight: bold;
+}
+
+#about #tecnologias ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}

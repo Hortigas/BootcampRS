@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="icon" href="/media/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="/CSS/style.css" />
+
+        <title>Desafio2-3</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <a id="linkIcon" href="https://skylab.rocketseat.com.br/dashboard" target="_blank">
+                    <img src="https://skylab.rocketseat.com.br/static/media/logo.0ae02df1.svg" alt="" />
+                </a>
+                <li><a href="https://discordapp.com/invite/gCRAFhc">Comunidade</a></li>
+                <li><a href="mailto:oi@rocketseat.com.br">Email</a></li>
+                <li><a href="tel:+5547992078767">Telefone</a></li>
+                <li><a id="sobre_Jump">Sobre</a></li>
+                <li><a id="conteudos_Jump">Conteúdos</a></li>
+            </ul>
+        </header>
+        <div id="content">
+            <section id="about">
+                <div id="info">
+                    <div id="logo">
+                        <img src="/media/logo.png" alt="logo" />
+                        <a id="empresa" href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+                    </div>
+
+                    <h3>
+                        <p>Acima de tudo, é fundamental ressaltar que a percepção das dificuldades é uma das consequências da gestão inovadora da qual fazemos parte.</p>
+                        <p>As experiências acumuladas demonstram que a revolução dos costumes exige a precisão e a definição da gestão inovadora da qual fazemos parte.</p>
+                        <p>A certificação de metodologias que nos auxiliam a lidar com a execução dos pontos do programa maximiza as possibilidades por conta das novas proposições.</p>
+                    </h3>
+                </div>
+                <div id="tecnologias">
+                    <h2>
+                        As mesmas tecnologias
+                        <p></p>
+                        utilizadas por empresas como:
+                    </h2>
+                    <h3>Nubank, Netflix, Uber, Instagram e Airbnb</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Etc.</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="cards">
+                <div class="card" id="Starter" onclick="abrirModal('starter')">
+                    <div class="card_number"><h1>01</h1></div>
+                    <img src="https://skylab.rocketseat.com.br/static/64c237ccff807c054339a62d53b4b402.svg" alt="" />
+                    <h2>Cursos gratuitos!</h2>
+                </div>
+                <div class="card" id="LaunchBase" onclick="abrirModal('launchbase')">
+                    <div class="card_number"><h1>02</h1></div>
+                    <img src="https://skylab.rocketseat.com.br/static/0828532024cb46921a6b5e941f8d788d.svg" alt="" />
+                    <h2>Vagas abertas!</h2>
+                </div>
+                <div class="card" id="GoStack" onclick="abrirModal('gostack')">
+                    <div class="card_number"><h1>03</h1></div>
+                    <img src="https://skylab.rocketseat.com.br/static/83a178a0653dab1d55e2ed7946465975.svg" alt="" />
+                    <h2>Garanta sua vaga para a proxima turma!</h2>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+            <a href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br" target="_blank">Instagram</a>
+            <a href="https://pt-br.facebook.com/rocketseat/" target="_blank">Facebook</a>
+        </footer>
+        <div class="modal desativado">
+            <div>
+                <a class="material-icons" onclick="fecharModal()">close</a>
+                <a id="linkExt" href="" class="material-icons" onclick="fecharModal()" target="_blank">open_in_new</a>
+            </div>
+            <iframe src="" frameborder="0"></iframe>
+        </div>
+        <script src="/JS/menuJump.js"></script>
+        <script src="/JS/modal.js"></script>
+    </body>
+</html>

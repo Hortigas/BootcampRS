@@ -1,0 +1,85 @@
+#cards {
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+#cards .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-height: 650px;
+    height: 70vh;
+
+    padding: 50px;
+    background: url(/media/background.png) 0% 0% / cover fixed, rgb(11, 10, 13);
+    border-radius: 15px;
+
+    transition: transform 300ms;
+}
+
+#cards .card:hover {
+    transform: translate(0, -10px);
+    transition: transform 300ms;
+    cursor: pointer;
+}
+
+#cards .card div.card_number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cards .card div.card_number h1 {
+    font-size: 0.6cm;
+}
+
+#cards .card img {
+    height: 30%;
+}
+
+#cards h2 {
+    font-size: medium;
+    font-weight: lighter;
+    color: gray;
+}
+/* Starter */
+#cards #Starter:hover {
+    border: 2px solid rgb(113, 89, 193);
+}
+#cards #Starter div.card_number {
+    border: 2px solid rgb(113, 89, 193);
+}
+#cards #Starter div.card_number h1 {
+    color: rgb(113, 89, 193);
+}
+/* LaunchBase */
+#cards #LaunchBase:hover {
+    border: 2px solid rgb(253, 149, 31);
+}
+
+#cards #LaunchBase div.card_number {
+    border: 2px solid rgb(253, 149, 31);
+}
+
+#cards #LaunchBase div.card_number h1 {
+    color: rgb(253, 149, 31);
+}
+/* GoStack */
+#cards #GoStack:hover {
+    border: 2px solid rgb(4, 211, 97);
+}
+
+#cards #GoStack div.card_number {
+    border: 2px solid rgb(4, 211, 97);
+}
+
+#cards #GoStack div.card_number h1 {
+    color: rgb(4, 211, 97);
+}
