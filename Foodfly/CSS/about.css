@@ -1,0 +1,26 @@
+@import '/CSS/responsive.css';
+@import '/CSS/general.css';
+@import '/CSS/header.css';
+@import '/CSS/footer.css';
+
+#content h2 {
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+#content h3 {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+#content h4 {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+
+    margin-bottom: 30px;
+}

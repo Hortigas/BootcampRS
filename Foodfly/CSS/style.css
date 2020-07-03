@@ -1,0 +1,73 @@
+@import '/CSS/responsive.css';
+@import '/CSS/general.css';
+@import '/CSS/header.css';
+@import '/CSS/footer.css';
+
+#content #presentation {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+
+    background: #fbdfdb;
+    border-radius: 30px;
+
+    margin-bottom: 45px;
+}
+
+#content #presentation #text {
+    max-width: 316px;
+    margin: 40px;
+}
+
+#content #presentation #text h1 {
+    font-weight: bold;
+    font-size: 32px;
+}
+#content #presentation #text h4 {
+    opacity: 0.7;
+    font-size: 18px;
+    color: #000000;
+    line-height: 28px;
+}
+
+#content #presentation img {
+    margin: 60px 70px 0px;
+}
+
+#content .catalog h2 {
+    font-weight: bold;
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+#content .catalog #items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#content .catalog #items .item {
+    max-width: 300px;
+}
+
+#content .catalog #items .item img {
+    width: 100%;
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+#content .catalog #items .item h3 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+#content .catalog #items .item h4 {
+    font-size: 14px;
+    color: #777777;
+}

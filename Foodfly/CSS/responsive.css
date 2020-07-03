@@ -1,0 +1,9 @@
+@media only screen and (max-width: 900px) {
+    #content #presentation img {
+        display: none;
+    }
+
+    #content .catalog #items {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}

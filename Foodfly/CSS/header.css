@@ -1,0 +1,32 @@
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    max-width: 940px;
+    width: 67%;
+    height: 93px;
+    margin: auto;
+}
+
+header ul {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    margin-left: 65px;
+}
+
+header ul li {
+    margin: 20px;
+}
+
+header ul li a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+header ul li h2 {
+    font-size: 16px;
+    font-weight: bold;
+}

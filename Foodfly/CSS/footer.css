@@ -1,0 +1,16 @@
+footer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    height: 62px;
+    background: #eeeeee;
+
+    margin-top: 50px;
+}
+
+footer h4 {
+    font-size: 14px;
+    color: #999999;
+    text-align: center;
+}

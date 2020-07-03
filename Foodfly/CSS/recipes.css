@@ -1,0 +1,41 @@
+@import '/CSS/responsive.css';
+@import '/CSS/general.css';
+@import '/CSS/header.css';
+@import '/CSS/footer.css';
+@import '/CSS/modal.css';
+
+#content .catalog h2 {
+    font-weight: bold;
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+#content .catalog #items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+#content .catalog #items .item {
+    max-width: 300px;
+    cursor: pointer;
+}
+
+#content .catalog #items .item img {
+    width: 100%;
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+}
+
+#content .catalog #items .item h3 {
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+#content .catalog #items .item h4 {
+    font-size: 14px;
+    color: #777777;
+}
