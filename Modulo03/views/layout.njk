@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      {% block head %}{% endblock %}
+   </head>
+   <body>
+      <header>
+         <ul>
+            <a id="linkIcon" href="/">
+               <img src="https://skylab.rocketseat.com.br/static/media/logo.0ae02df1.svg" alt=""/>
+            </a>
+            <li>
+               <a href="https://discordapp.com/invite/gCRAFhc">Comunidade</a>
+            </li>
+            <li>
+               <a href="mailto:oi@rocketseat.com.br">Email</a>
+            </li>
+            <li>
+               <a href="tel:+5547992078767">Telefone</a>
+            </li>
+            <li>
+               <a id="sobre_Jump">Sobre</a>
+            </li>
+            <li>
+               <a id="conteudos_Jump">Conteúdos</a>
+            </li>
+         </ul>
+      </header>
+      {% block content %}{% endblock %}
+      <footer>
+         <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+         <a href="https://www.instagram.com/rocketseat_oficial/?hl=pt-br" target="_blank">Instagram</a>
+         <a href="https://pt-br.facebook.com/rocketseat/" target="_blank">Facebook</a>
+      </footer>
+      {% block scripts %}{% endblock %}
+      {% block modal %}{% endblock %}
+   </body>
+</html>
