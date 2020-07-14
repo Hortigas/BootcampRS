@@ -3,18 +3,16 @@
 {% block head %}
    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
    <link rel="icon" href="/media/favicon.ico" type="image/x-icon"/>
-   <link rel="stylesheet" href="/CSS/error404.css"/>
+   <link rel="stylesheet" href="/CSS/curso.css"/>
 
-   <title>Error 404</title>
+   <title>{{curso.name}}</title>
 {% endblock %}
 
 {% block content %}
    <div id="content">
-      <div>
-         <img src="/media/robot.png" alt="error">
-         <h2>Error 404</h2>
-         <h3>page not found</h3>
-      </div>
+      <img src="{{curso.image}}" alt="">
+      <h3>{{curso.description}}</h3>
+      <a href="https://rocketseat.com.br/{{curso.id}}" target="_blank">link para o site</a>
    </div>
 {% endblock %}
 

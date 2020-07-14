@@ -50,36 +50,36 @@
     color: gray;
 }
 /* Starter */
-#cards #Starter:hover {
+#cards #starter:hover {
     border: 2px solid rgb(113, 89, 193);
 }
-#cards #Starter div.card_number {
+#cards #starter div.card_number {
     border: 2px solid rgb(113, 89, 193);
 }
-#cards #Starter div.card_number h1 {
+#cards #starter div.card_number h1 {
     color: rgb(113, 89, 193);
 }
 /* LaunchBase */
-#cards #LaunchBase:hover {
+#cards #launchbase:hover {
     border: 2px solid rgb(253, 149, 31);
 }
 
-#cards #LaunchBase div.card_number {
+#cards #launchbase div.card_number {
     border: 2px solid rgb(253, 149, 31);
 }
 
-#cards #LaunchBase div.card_number h1 {
+#cards #launchbase div.card_number h1 {
     color: rgb(253, 149, 31);
 }
 /* GoStack */
-#cards #GoStack:hover {
+#cards #gostack:hover {
     border: 2px solid rgb(4, 211, 97);
 }
 
-#cards #GoStack div.card_number {
+#cards #gostack div.card_number {
     border: 2px solid rgb(4, 211, 97);
 }
 
-#cards #GoStack div.card_number h1 {
+#cards #gostack div.card_number h1 {
     color: rgb(4, 211, 97);
 }

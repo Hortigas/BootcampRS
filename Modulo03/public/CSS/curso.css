@@ -1,8 +1,6 @@
 @import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
 @import '/CSS/header.css';
 @import '/CSS/footer.css';
-@import '/CSS/about.css';
-@import '/CSS/cards.css';
 
 * {
     box-sizing: border-box;
@@ -25,8 +23,35 @@ body {
 #content {
     width: 70vw;
     margin: 50px auto 0;
-    height: 200vh;
+    height: 100vh;
     background-color: #0e0e10d5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#content img {
+    height: 200px;
+    margin-bottom: 100px;
+}
+
+#content h3 {
+    max-width: 75%;
+    font-size: large;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+#content a {
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #50fa7b;
+}
+#content a:hover {
+    color: #50fa7b;
 }
 
 ::-webkit-scrollbar {

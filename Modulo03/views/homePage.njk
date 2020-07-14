@@ -39,43 +39,22 @@
             </div>
         </section>
         <section id="cards">
-            <div class="card" id="Starter" onclick="abrirModal('starter')">
-                <div class="card_number">
-                    <h1>01</h1>
+            {% for curso in cursosData %}
+                <div class="card" id="{{curso.id}}">
+                    <div class="card_number">
+                        <h1>{{curso.number}}</h1>
+                    </div>
+                    <img src="{{curso.image}}" alt="imagem de {{curso.name}}"/>
+                    <h2>{{curso.subscription}}</h2>
                 </div>
-                <img src="/media/starter.svg" alt=""/>
-                <h2>Cursos gratuitos!</h2>
-            </div>
-            <div class="card" id="LaunchBase" onclick="abrirModal('launchbase')">
-                <div class="card_number">
-                    <h1>02</h1>
-                </div>
-                <img src="/media/launchBase.svg" alt=""/>
-                <h2>Vagas abertas!</h2>
-            </div>
-            <div class="card" id="GoStack" onclick="abrirModal('gostack')">
-                <div class="card_number">
-                    <h1>03</h1>
-                </div>
-                <img src="/media/goStack.svg" alt=""/>
-                <h2>Garanta sua vaga para a proxima turma!</h2>
-            </div>
+            {% endfor %}
         </section>
+
     </div>
 
 {% endblock %}
 
 {% block scripts %}
     <script src="/JS/menuJump.js"></script>
-    <script src="/JS/modal.js"></script>
-{% endblock %}
-
-{% block modal %}
-    <div class="modal desativado">
-        <div>
-            <a class="material-icons" onclick="fecharModal()">close</a>
-            <a id="linkExt" href="" class="material-icons" onclick="fecharModal()" target="_blank">open_in_new</a>
-        </div>
-        <iframe src="" frameborder="0"></iframe>
-    </div>
+    <script src="/JS/cursoPage.js"></script>
 {% endblock %}
