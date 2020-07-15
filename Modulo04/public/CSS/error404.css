@@ -1,0 +1,67 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+@import '/CSS/header.css';
+@import '/CSS/footer.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-ser;
+    color: #efeff1;
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 100%;
+    text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    background: url(/media/background.png) 0% 0% / cover fixed, rgb(11, 10, 13);
+}
+
+#content {
+    width: 70vw;
+    margin: 50px auto 0;
+    height: 100vh;
+    background-color: #0e0e10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#content div img {
+    height: 250px;
+}
+
+#content div h2 {
+    font-size: 40px;
+}
+
+#content div h3 {
+    font-size: 24px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(24, 24, 27);
+    border-left: 1px solid black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0e0e10d5;
+}
