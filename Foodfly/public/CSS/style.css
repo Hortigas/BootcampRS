@@ -52,13 +52,20 @@
 
 #content .catalog #items .item {
     max-width: 300px;
+    overflow: hidden;
 }
 
 #content .catalog #items .item img {
     width: 100%;
     border-radius: 15px;
-
     margin-bottom: 20px;
+
+    transition: 500ms;
+}
+
+#content .catalog #items .item img:hover {
+    transform: scale(1.2);
+    transition: 500ms;
 }
 
 #content .catalog #items .item h3 {

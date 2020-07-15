@@ -1,0 +1,73 @@
+@import '/CSS/responsive.css';
+@import '/CSS/general.css';
+@import '/CSS/header.css';
+@import '/CSS/footer.css';
+
+#content {
+    min-height: 100vh;
+}
+
+#content img {
+    border-radius: 15px;
+    margin: 10px 0px;
+}
+
+#content h1,
+h3 {
+    text-align: center;
+}
+
+#content h1 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#content h3 {
+    font-size: 20px;
+    color: #777777;
+}
+
+#content div {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px 0px;
+}
+
+#content div * {
+    margin-right: 8px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#content div h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#content div h4 {
+    font-weight: bold;
+    font-size: 12px;
+    color: #999999;
+    cursor: pointer;
+}
+
+#content li,
+span {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+#content span {
+    white-space: pre-line;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}

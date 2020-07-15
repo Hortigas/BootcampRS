@@ -1,0 +1,16 @@
+{
+    "name": "foodfly",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "nodemon -e js,mjs,json,njk,css server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "nunjucks": "^3.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    }
+}
