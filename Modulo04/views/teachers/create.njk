@@ -1,0 +1,61 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/CSS/teacher.css"/>
+    <link rel="stylesheet" href="/CSS/card-create.css">
+
+    <title>Professor-novo cadastro</title>
+{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <form class="card" id="formTeacher" method="post" action="/professores">
+            <section class="avatar">
+                <img src="/media/avatar.jpg" alt="">
+            </section>
+            <section class="details">
+                <h2>Novo Cadastro</h2>
+                <div class="item">
+                    <div>Avatar URL</div>
+                    <input type="url" name="avatar_url" placeholder="http://">
+                    <input type="hidden" name="urlVerify">
+                </div>
+                <div class="item">
+                    <div>Nome completo</div>
+                    <input type="text" name="name">
+                </div>
+                <div class="item">
+                    <div>Data de nascimento</div>
+                    <input type="date" name="birth">
+                </div>
+                <div class="item">
+                    <div>Grau de escolaridade</div>
+                    <select type="select" name="edu_level">
+                        <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                        <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                        <option value="Mestrado">Mestrado</option>
+                        <option value="Doutorado">Doutorado</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <div>Tipo de aula</div>
+                    <span><input type="radio" name="education" value="presential" checked="checked">Presencial</span>
+                    <span><input type="radio" name="education" value="distance">À distância</span>
+                </div>
+                <div class="item">
+                    <div>Área de atuação</div>
+                    <div>
+                        <input type="text" name="knowledge" placeholder="ex. Matematica, Fisica">
+                    </div>
+                </div>
+                <a href="javascript:{}" onclick="document.getElementById('formTeacher').submit();">Salvar</a>
+            </section>
+
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/JS/avatar.js"></script>
+{% endblock %}

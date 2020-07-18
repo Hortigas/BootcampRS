@@ -2,16 +2,14 @@
     display: grid;
     grid-template-columns: 40% 60%;
 
-    width: 70%;
-    height: 60%;
-    margin-top: 10%;
+    width: 60%;
+    height: 70%;
+    margin-top: 5%;
 
     background-color: #26262c;
     box-shadow: 2px 2px 5px 5px black;
 
-    padding: 32px;
-
-    animation: card 500ms ease-in forwards;
+    animation: card 500ms ease-in;
 }
 
 /* animation */
@@ -19,29 +17,35 @@
 @keyframes card {
     from {
         box-shadow: none;
-        opacity: 1;
+        opacity: 0;
+        transform: translate3d(10px, 10px, 0);
     }
     to {
         opacity: 1;
-        transform: translate3d(-10px, -10px, 0);
     }
 }
 
 .avatar {
     margin-right: 16px;
-    box-shadow: 1px 1px 3px 2px #000000aa;
 }
 
 .details {
-    margin-left: 16px;
+    padding: 32px;
+}
+
+.details h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: #a970ff;
+    margin-bottom: 24px;
 }
 
 .details .item {
-    padding: 16px;
+    padding: 16px 0px;
     border-top: 1px solid #53535f50;
 }
 
-.details .item:first-child {
+.details .item:first-of-type {
     border: none;
 }
 
@@ -60,7 +64,7 @@
 .details span {
     margin: 4px 8px 0px 0px;
     padding: 4px 8px;
-    background-color: #a26df2;
+    background-color: #3a3a3d;
     border-radius: 16px;
     display: inline-block;
 }
