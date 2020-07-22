@@ -10,10 +10,11 @@ exports.post = function (req, res) {
     let { avatar_url, name, birth, edu_level, education, knowledge } = req.body;
 
     birth = Date.parse(birth);
-    const id = Number(data.instructors.length);
+    const id = Number(data.teachers.length);
     const created_at = Date.now();
+    knowledge = knowledge.split(', ');
 
-    data.instructors.push({
+    data.teachers.push({
         id,
         avatar_url,
         name,
@@ -28,3 +29,97 @@ exports.post = function (req, res) {
         return res.redirect('/professores');
     });
 };
+
+exports.show = function (req, res) {
+    const { id } = req.params;
+    const found = data.teachers.find((teacher, foundIndex) => {
+        if (id == teacher.id) {
+            index = foundIndex;
+            return true;
+        }
+    });
+    if (!found) return res.status(404).render('not-found');
+
+    const teacher = {
+        ...found,
+        age: calcAge(found.birth),
+        since: new Intl.DateTimeFormat('pt-BR').format(found.created_at),
+    };
+
+    return res.render('teachers/show', { teacher });
+};
+
+exports.edit = function (req, res) {
+    const { id } = req.params;
+    const found = data.teachers.find((teacher, foundIndex) => {
+        if (id == teacher.id) {
+            index = foundIndex;
+            return true;
+        }
+    });
+    if (!found) return res.status(404).render('not-found');
+    if (!found) return res.status(404).render('not-found');
+
+    const teacher = {
+        ...found,
+        birth: calcDate(found.birth),
+        since: new Intl.DateTimeFormat('pt-BR').format(found.created_at),
+        knowledge: found.knowledge.join(', '),
+    };
+
+    return res.render('teachers/edit', { teacher });
+};
+
+exports.put = function (req, res) {
+    let index = null;
+
+    const { id } = req.body;
+    const found = data.teachers.find((teacher, foundIndex) => {
+        if (id == teacher.id) {
+            index = foundIndex;
+            return true;
+        }
+    });
+    if (!found) return res.status(404).render('not-found');
+
+    const teacher = {
+        ...found,
+        ...req.body,
+        birth: Date.parse(req.body.birth),
+        knowledge: req.body.knowledge.split(', '),
+    };
+
+    data.teachers[index] = teacher;
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 4), (err) => {
+        if (err) return res.send('erro na escrita do arquivo');
+        return res.redirect(`/professores/${req.body.id}`);
+    });
+};
+
+exports.delete = function (req, res) {
+    const { id } = req.body;
+    data.teachers = data.teachers.filter((teacher) => teacher.id != id);
+    fs.writeFile('data.json', JSON.stringify(data, null, 4), (err) => {
+        if (err) return res.send('erro na escrita do arquivo');
+        return res.redirect(`/professores`);
+    });
+};
+
+function calcDate(timestamp) {
+    const date = new Date(timestamp);
+    const year = date.getUTCFullYear();
+    const month = ('0' + (date.getUTCMonth() + 1)).slice(-2);
+    const day = ('0' + date.getUTCDate()).slice(-2);
+    return `${year}-${month}-${day}`;
+}
+
+function calcAge(timestamp) {
+    const age = Math.floor((new Date().getTime() - timestamp) / (1000 * 60 * 60 * 24 * 365));
+    return age;
+}
+
+function calcSince(created_at) {
+    const since = new Date(created_at);
+    return since.getVarDate;
+}

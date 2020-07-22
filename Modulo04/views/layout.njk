@@ -9,15 +9,16 @@
       <header>
          <ul>
             <li>
-               <a href="/teachers" class='active'>Teachers</a>
+               <a href="/professores" id="teachers">Professores</a>
             </li>
             <li>
-               <a href="/students">Students</a>
+               <a href="/estudantes" id="students">Estudantes</a>
             </li>
          </ul>
       </header>
       {% block content %}{% endblock %}
       <footer></footer>
+      <script src="/JS/header.js"></script>
       {% block scripts %}{% endblock %}
       {% block modal %}{% endblock %}
    </body>

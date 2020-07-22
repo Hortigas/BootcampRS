@@ -39,8 +39,8 @@
                 </div>
                 <div class="item">
                     <div>Tipo de aula</div>
-                    <span><input type="radio" name="education" value="presential" checked="checked">Presencial</span>
-                    <span><input type="radio" name="education" value="distance">À distância</span>
+                    <span><input type="radio" name="education" value="Presencial" checked="checked">Presencial</span>
+                    <span><input type="radio" name="education" value="À distância">À distância</span>
                 </div>
                 <div class="item">
                     <div>Área de atuação</div>
@@ -48,14 +48,12 @@
                         <input type="text" name="knowledge" placeholder="ex. Matematica, Fisica">
                     </div>
                 </div>
-                <a href="javascript:{}" onclick="document.getElementById('formTeacher').submit();">Salvar</a>
+                <a id="enviar" href="javascript:{}" onclick="document.getElementById('formTeacher').submit();">Salvar</a>
             </section>
-
         </form>
     </div>
-</div>
 {% endblock %}
 
 {% block scripts %}
-<script src="/JS/avatar.js"></script>
+    <script src="/JS/avatar.js"></script>
 {% endblock %}

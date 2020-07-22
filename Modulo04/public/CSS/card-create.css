@@ -91,11 +91,20 @@ input[type='url'] {
 
 .details a {
     position: absolute;
-    right: 60px;
     bottom: 20px;
     font-size: 20px;
-    color: #a970ff;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.details a#enviar {
+    color: #a970ff;
+    right: 60px;
+}
+
+.details a#deletar {
+    color: red;
+    right: 140px;
 }
 
 /* animation */

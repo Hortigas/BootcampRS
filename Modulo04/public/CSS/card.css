@@ -31,6 +31,7 @@
 
 .details {
     padding: 32px;
+    position: relative;
 }
 
 .details h2 {
@@ -67,4 +68,14 @@
     background-color: #3a3a3d;
     border-radius: 16px;
     display: inline-block;
+}
+
+.details a {
+    position: absolute;
+    right: 60px;
+    bottom: 20px;
+    font-size: 20px;
+    color: #a970ff;
+    cursor: pointer;
+    text-decoration: none;
 }

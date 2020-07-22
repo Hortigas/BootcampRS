@@ -1,0 +1,75 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+   <link rel="stylesheet" href="/CSS/teacher.css"/>
+   <link rel="stylesheet" href="/CSS/card-create.css">
+
+   <title>Professor-editar cadastro</title>
+{% endblock %}
+
+{% block content %}
+   <div id="content">
+      <form class="card" id="formTeacher" method="post" action="/professores?_method=PUT">
+         <section class="avatar">
+            <img src="/media/avatar.jpg" alt="">
+         </section>
+         <section class="details">
+            <h2>Editar Cadastro</h2>
+            <div class="item">
+               <div>Avatar URL</div>
+               <input type="url" name="avatar_url" placeholder="http://" value="{{teacher.avatar_url}}">
+               <input type="hidden" name="urlVerify">
+            </div>
+            <div class="item">
+               <div>Nome completo</div>
+               <input type="text" name="name" value="{{teacher.name}}">
+            </div>
+            <div class="item">
+               <div>Data de nascimento</div>
+               <input type="date" name="birth" value="{{ teacher.birth }}">
+            </div>
+            <div class="item">
+               <div>Grau de escolaridade</div>
+               <select type="select" name="edu_level">
+                  <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+                  <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+                  <option value="Mestrado">Mestrado</option>
+                  <option value="Doutorado">Doutorado</option>
+               </select>
+            </div>
+            <div class="item">
+               <div>Tipo de aula</div>
+               <span><input type="radio" name="education" value="Presencial" {% if teacher.education == 'Presencial'%} checked="checked" {% endif %}>Presencial</span>
+               <span><input type="radio" name="education" value="À distância" {% if teacher.education == 'À distância'%} checked="checked" {% endif %}>À distância</span>
+            </div>
+            <div class="item">
+               <div>Área de atuação</div>
+               <div>
+                  <input type="text" name="knowledge" placeholder="ex. Matematica, Fisica" value="{{teacher.knowledge}}">
+               </div>
+            </div>
+            <input type="hidden" name="id" value="{{teacher.id}}">
+            <a id='enviar' onclick="document.getElementById('formTeacher').submit();">Salvar</a>
+            <a id='deletar' onclick="document.getElementById('formTeacherDelete').submit();">Deletar</a>
+         </section>
+
+      </form>
+      <form id="formTeacherDelete" method="post" action="/professores?_method=DELETE">
+         <input type="hidden" name="id" value='{{ teacher.id }}'>
+      </form>
+   </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/JS/avatar.js"></script>
+<script>
+   selected = "{{ teacher.edu_level }}";
+   options = document.querySelectorAll('option');
+   for (const option of options) {
+      if (option.value == selected) {
+         option.setAttribute('selected', 'selected')
+      }
+   }
+</script>
+{% endblock %}

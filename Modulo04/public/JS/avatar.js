@@ -9,6 +9,10 @@ inputAvatar.addEventListener('focusout', () => {
     testImage(inputAvatar.value, answerTestImage, 1000);
 });
 
+window.addEventListener('load', () => {
+    testImage(inputAvatar.value, answerTestImage, 1000);
+});
+
 function testImage(url, callback, timeout) {
     timeout = timeout || 5000;
     var timedOut = false,

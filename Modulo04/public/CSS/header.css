@@ -52,10 +52,10 @@ header ul li a:hover::after {
 
 .active::after {
     content: '';
+    left: 0;
     width: 100%;
     height: 2px;
     background-color: #efeff1;
     position: absolute;
-    left: 0%;
     bottom: 10px;
 }
