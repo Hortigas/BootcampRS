@@ -3,6 +3,7 @@
 @import '/CSS/footer.css';
 
 * {
+    border-spacing: 0;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;

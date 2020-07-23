@@ -1,6 +1,10 @@
 const fs = require('fs');
 const data = require('./data.json');
 
+exports.info = function (req, res) {
+    res.render('teachers/info', { teachers: data.teachers });
+};
+//criar novo
 exports.post = function (req, res) {
     const keys = Object.keys(req.body);
     for (const key of keys) if (req.body[key] == '') return res.send('Por favor, preencher todos os campos');
@@ -29,7 +33,7 @@ exports.post = function (req, res) {
         return res.redirect('/professores');
     });
 };
-
+//mostrar
 exports.show = function (req, res) {
     const { id } = req.params;
     const found = data.teachers.find((teacher, foundIndex) => {
@@ -48,7 +52,7 @@ exports.show = function (req, res) {
 
     return res.render('teachers/show', { teacher });
 };
-
+//editar
 exports.edit = function (req, res) {
     const { id } = req.params;
     const found = data.teachers.find((teacher, foundIndex) => {
@@ -57,7 +61,6 @@ exports.edit = function (req, res) {
             return true;
         }
     });
-    if (!found) return res.status(404).render('not-found');
     if (!found) return res.status(404).render('not-found');
 
     const teacher = {
@@ -69,7 +72,7 @@ exports.edit = function (req, res) {
 
     return res.render('teachers/edit', { teacher });
 };
-
+//salvar mudancas
 exports.put = function (req, res) {
     let index = null;
 
@@ -87,6 +90,7 @@ exports.put = function (req, res) {
         ...req.body,
         birth: Date.parse(req.body.birth),
         knowledge: req.body.knowledge.split(', '),
+        id: Number(req.body.id),
     };
 
     data.teachers[index] = teacher;

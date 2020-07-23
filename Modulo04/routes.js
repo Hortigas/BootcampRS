@@ -4,7 +4,7 @@ const routes = express.Router();
 
 routes.get('/', (req, res) => res.redirect('/professores'));
 
-routes.get('/professores', (req, res) => res.render('teachers/info'));
+routes.get('/professores', teachers.info);
 routes.get('/professores/criar', (req, res) => res.render('teachers/create'));
 routes.get('/professores/:id', teachers.show);
 routes.get('/professores/:id/edit', teachers.edit);

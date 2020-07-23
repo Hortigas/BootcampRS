@@ -1,0 +1,76 @@
+.table-container {
+    text-align: left;
+    display: table;
+    height: auto;
+}
+
+.table-container table {
+    width: 100%;
+}
+
+.table-container table tr th {
+    padding: 16px 0px 16px 20px;
+}
+
+.table-container table tr td {
+    padding: 10px 0px 10px 20px;
+}
+
+.table-container table thead tr {
+    background-color: #060627;
+}
+
+.table-container table thead tr th h1 {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+/* Background-color of the odd rows */
+.table-container table tbody tr:nth-child(odd) {
+    background-color: #2d2d35;
+}
+
+/* Background-color of the even rows */
+.table-container table tbody tr:nth-child(even) {
+    background-color: #26262c;
+}
+
+.table-container table tbody tr td {
+    font-weight: normal;
+    font-size: 1em;
+    box-shadow: 0 2px 2px -2px #0f1116;
+}
+
+.table-container table tbody tr td:nth-child(2) {
+    color: #a0a9b8;
+}
+
+.table-container table tbody tr td:last-child {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.table-container table tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+.table-container table tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.table-container table tbody tr td:first-child span:hover {
+    transition: 1s;
+    overflow: visible;
+    transform: scale(3);
+}
+
+.table-container table tbody tr td a img {
+    width: 25px;
+}

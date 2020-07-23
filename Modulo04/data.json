@@ -1,43 +1,35 @@
 {
     "teachers": [
         {
-            "id": "0",
+            "id": 0,
             "avatar_url": "https://blog.unicep.edu.br/wp-content/uploads/2019/07/qual-a-importancia-do-professor-na-formacao-do-aluno-935x614.jpg",
             "name": "Joacir Teixeira Dias",
             "birth": -315619200000,
             "edu_level": "Doutorado",
-            "education": "À distância",
-            "knowledge": [
-                "Matemática avançada",
-                "Física Quântica"
-            ],
+            "education": "Presencial",
+            "knowledge": ["Matemática avançada", "Física Quântica"],
             "created_at": 1595442177849,
             "urlVerify": "true"
         },
         {
-            "id": "1",
+            "id": 1,
             "avatar_url": "https://neuroconecte.com/wp-content/uploads/2019/07/competencia-socioemocional-do-professor-face.jpg",
             "name": "Joaquina Fagundes",
             "birth": 31449600000,
             "edu_level": "Mestrado",
             "education": "Presencial",
-            "knowledge": [
-                "Matemática",
-                "Física"
-            ],
+            "knowledge": ["Matemática", "Física"],
             "created_at": 1595443075375,
             "urlVerify": "true"
         },
         {
-            "id": "2",
+            "id": 2,
             "avatar_url": "https://www.jornalcontabil.com.br/wp-content/uploads/2019/07/senior-masculino-professor-segurando-o-livro-e-escrevendo-no-quadro-negro_23-2148200974.jpg",
             "name": "Sergiao powerguido",
             "birth": -619833600000,
             "edu_level": "Ensino Médio Completo",
             "education": "Presencial",
-            "knowledge": [
-                "Artes"
-            ],
+            "knowledge": ["Artes"],
             "created_at": 1595447570165,
             "urlVerify": "true"
         }
