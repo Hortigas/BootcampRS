@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/CSS/teacher.css"/>
+    <link rel="stylesheet" href="/CSS/student.css"/>
     <link rel="stylesheet" href="/CSS/card.css">
     <link rel="stylesheet" href="/CSS/table.css">
     <title>Professor</title>
@@ -17,25 +17,33 @@
                             <h1>Educador(a)</h1>
                         </th>
                         <th>
-                            <h1>Acompanhamento</h1>
+                            <h1>Email</h1>
+                        </th>
+                        <th>
+                            <h1>Ano escolar</h1>
                         </th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for teacher in teachers %}
+                    {% for student in students %}
                         <tr>
                             <td>
-                                <span style="background-image: url({{teacher.avatar_url}})"></span>{{teacher.name}}</td>
-                            <td>{{teacher.knowledge.join(', ')}}</td>
+                                <span style="background-image: url({{student.avatar_url}})"></span>{{student.name}}
+                            </td>
                             <td>
-                                <a href="/professores/{{ teacher.id }}"><img src="/media/perfil.png" alt=""></a>
+                                {{student.email}}
+                            </td>
+                            <td>
+                                {{ student.edu_level }}</td>
+                            <td>
+                                <a href="/alunos/{{ student.id }}"><img src="/media/perfil.png" alt=""></a>
                             </td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
-            <a href="/professores/criar" id="new">Novo</a>
+            <a href="/alunos/criar" id="new">Novo</a>
         </div>
     </div>
 </div>

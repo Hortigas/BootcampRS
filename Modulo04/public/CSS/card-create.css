@@ -3,7 +3,7 @@
     grid-template-columns: 40% 60%;
 
     width: 60%;
-    height: 70%;
+    height: 75%;
     margin-top: 5%;
 
     background-color: #26262c;
@@ -61,19 +61,26 @@ select {
     margin-top: 5px;
     font-size: 18px;
     color: #dedee3;
-    background-color: #26262c;
+    background-color: #1d1d22;
+    padding: 4px 12px;
+    border-radius: 16px;
     border: none;
     outline: none;
 }
 
 .details .item input[type='text'],
-input[type='url'] {
+input[type='url'],
+input[type='email'] {
     width: 100%;
 }
 
 .details .item input[type='radio'] {
     margin-right: 5px;
     color: red;
+}
+
+.details .item input[type='number'] {
+    width: 80px;
 }
 
 .details .item input::placeholder {
@@ -92,19 +99,21 @@ input[type='url'] {
 .details a {
     position: absolute;
     bottom: 20px;
-    font-size: 20px;
     cursor: pointer;
     text-decoration: none;
+    background-color: #060627;
+    border-radius: 16px;
+    padding: 8px 60px;
+    font-weight: bold;
 }
 
-.details a#enviar {
-    color: #a970ff;
-    right: 60px;
+.details a#send {
+    right: 35px;
 }
 
-.details a#deletar {
+.details a#delete {
     color: red;
-    right: 140px;
+    right: 225px;
 }
 
 /* animation */

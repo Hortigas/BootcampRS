@@ -1,0 +1,60 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/CSS/student.css"/>
+    <link rel="stylesheet" href="/CSS/card-create.css">
+
+    <title>Professor-novo cadastro</title>
+{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <form class="card" id="formStudent" method="post" action="/alunos">
+            <section class="avatar">
+                <img src="/media/avatar.jpg" alt="">
+            </section>
+            <section class="details">
+                <h2>Novo Cadastro</h2>
+                <div class="item">
+                    <div>Avatar URL</div>
+                    <input type="url" name="avatar_url" placeholder="http://">
+                    <input type="hidden" name="urlVerify">
+                </div>
+                <div class="item">
+                    <div>Nome completo</div>
+                    <input type="text" name="name">
+                </div>
+                <div class="item">
+                    <div>Email</div>
+                    <input type="email" name="email">
+                </div>
+                <div class="item">
+                    <div>Grau de escolaridade</div>
+                    <select type="select" name="edu_level">
+                        <option value="5º ano do ensino fundamental">5º ano do ensino fundamental</option>
+                        <option value="6º ano do ensino fundamental">6º ano do ensino fundamental</option>
+                        <option value="7º ano do ensino fundamental">7º ano do ensino fundamental</option>
+                        <option value="8º ano do ensino fundamental">8º ano do ensino fundamental</option>
+                        <option value="9º ano do ensino fundamental">9º ano do ensino fundamental</option>
+                        <option value="1º ano do ensino médio">1º ano do ensino médio</option>
+                        <option value="2º ano do ensino médio">2º ano do ensino médio</option>
+                        <option value="3º ano do ensino médio">3º ano do ensino médio</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <div>Data de nascimento</div>
+                    <input type="date" name="birth">
+                </div>
+                <div class="item">
+                    <div>Carga horária semanal</div>
+                    <input type="number" name="workload">
+                </div>
+                <a id="enviar" href="javascript:{}" onclick="document.getElementById('formStudent').submit();">Salvar</a>
+            </section>
+        </form>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/JS/avatar.js"></script>
+{% endblock %}

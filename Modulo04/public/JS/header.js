@@ -1,4 +1,4 @@
-const url = window.location.href;
+const url = window.location.pathname;
 const teachers = document.getElementById('teachers');
 const students = document.getElementById('students');
 
@@ -6,7 +6,7 @@ if (url.includes('professores')) {
     teachers.classList.add('active');
     students.classList.remove('active');
 }
-if (url.includes('estudantes')) {
+if (url.includes('alunos')) {
     students.classList.add('active');
     teachers.classList.remove('active');
 }

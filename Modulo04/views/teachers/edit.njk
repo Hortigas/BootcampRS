@@ -3,6 +3,7 @@
 {% block head %}
    <link rel="stylesheet" href="/CSS/teacher.css"/>
    <link rel="stylesheet" href="/CSS/card-create.css">
+   <link rel="stylesheet" href="/CSS/modal.css">
 
    <title>Professor-editar cadastro</title>
 {% endblock %}
@@ -49,20 +50,22 @@
                </div>
             </div>
             <input type="hidden" name="id" value="{{teacher.id}}">
-            <a id='enviar' onclick="document.getElementById('formTeacher').submit();">Salvar</a>
-            <a id='deletar' onclick="document.getElementById('formTeacherDelete').submit();">Deletar</a>
+            <a id='send' onclick="document.getElementById('formTeacher').submit();">Salvar</a>
+            <a id='delete'>Deletar</a>
          </section>
 
       </form>
-      <form id="formTeacherDelete" method="post" action="/professores?_method=DELETE">
+      <form id="formDelete" method="post" action="/professores?_method=DELETE">
          <input type="hidden" name="id" value='{{ teacher.id }}'>
       </form>
    </div>
 </div>
+{% include "students/confirmation.njk" %}
 {% endblock %}
 
 {% block scripts %}
 <script src="/JS/avatar.js"></script>
+<script src="/JS/confirmation.js"></script>
 <script>
    selected = "{{ teacher.edu_level }}";
    options = document.querySelectorAll('option');

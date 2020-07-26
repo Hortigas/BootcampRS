@@ -1,27 +1,17 @@
 {
-    "teachers": [
+    "students": [
         {
             "id": 0,
-            "avatar_url": "https://blog.unicep.edu.br/wp-content/uploads/2019/07/qual-a-importancia-do-professor-na-formacao-do-aluno-935x614.jpg",
-            "name": "Joacir Teixeira Dias",
-            "birth": -315619200000,
-            "edu_level": "Doutorado",
-            "education": "Presencial",
-            "knowledge": ["Matemática avançada", "Física Quântica"],
-            "created_at": 1595442177849,
+            "avatar_url": "https://img.elo7.com.br/product/zoom/1D291C1/painel-sapo-cururu-decoracao-de-festa-painel.jpg",
+            "name": "patolino patoso",
+            "email": "patolimbo10203@gmail.com",
+            "edu_level": "9º ano do ensino fundamental",
+            "birth": 915148800000,
+            "workload": 32,
             "urlVerify": "true"
-        },
-        {
-            "id": 1,
-            "avatar_url": "https://neuroconecte.com/wp-content/uploads/2019/07/competencia-socioemocional-do-professor-face.jpg",
-            "name": "Joaquina Fagundes",
-            "birth": 31449600000,
-            "edu_level": "Mestrado",
-            "education": "Presencial",
-            "knowledge": ["Matemática", "Física"],
-            "created_at": 1595443075375,
-            "urlVerify": "true"
-        },
+        }
+    ],
+    "teachers": [
         {
             "id": 2,
             "avatar_url": "https://www.jornalcontabil.com.br/wp-content/uploads/2019/07/senior-masculino-professor-segurando-o-livro-e-escrevendo-no-quadro-negro_23-2148200974.jpg",
@@ -32,6 +22,26 @@
             "knowledge": ["Artes"],
             "created_at": 1595447570165,
             "urlVerify": "true"
+        },
+        {
+            "id": 3,
+            "avatar_url": "https://www.betha.com.br/blog/wp-content/uploads/2018/09/educacao-betha-sistemas.jpg",
+            "name": "Palmirinha Loira",
+            "birth": 655516800000,
+            "edu_level": "Ensino Superior Completo",
+            "education": "Presencial",
+            "knowledge": ["Culinária"],
+            "created_at": 1595697888041
+        },
+        {
+            "id": 0,
+            "avatar_url": "https://blog.unicep.edu.br/wp-content/uploads/2019/07/qual-a-importancia-do-professor-na-formacao-do-aluno-935x614.jpg",
+            "name": "Joacir Teixeira Dias",
+            "birth": -620784000000,
+            "edu_level": "Doutorado",
+            "education": "Presencial",
+            "knowledge": ["Matemática avançada", "Física Quântica"],
+            "created_at": 1595775935740
         }
     ]
 }

@@ -1,39 +1,14 @@
 const fs = require('fs');
-const data = require('./data.json');
+const data = require('../data.json');
 
 exports.info = function (req, res) {
     res.render('teachers/info', { teachers: data.teachers });
 };
-//criar novo
-exports.post = function (req, res) {
-    const keys = Object.keys(req.body);
-    for (const key of keys) if (req.body[key] == '') return res.send('Por favor, preencher todos os campos');
-    if (req.body.urlVerify == 'false') return res.send('Por favor, coloque o link de uma imagem valida');
-    if (!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(req.body.name)) return res.send('Por favor, digite um nome valido');
-
-    let { avatar_url, name, birth, edu_level, education, knowledge } = req.body;
-
-    birth = Date.parse(birth);
-    const id = Number(data.teachers.length);
-    const created_at = Date.now();
-    knowledge = knowledge.split(', ');
-
-    data.teachers.push({
-        id,
-        avatar_url,
-        name,
-        birth,
-        edu_level,
-        education,
-        knowledge,
-        created_at,
-    });
-    fs.writeFile('data.json', JSON.stringify(data, null, 4), (err) => {
-        if (err) return res.send('erro na escrita do arquivo');
-        return res.redirect('/professores');
-    });
+//pagina criar
+exports.create = function (req, res) {
+    res.render('teachers/create');
 };
-//mostrar
+//pagina mostrar
 exports.show = function (req, res) {
     const { id } = req.params;
     const found = data.teachers.find((teacher, foundIndex) => {
@@ -52,7 +27,7 @@ exports.show = function (req, res) {
 
     return res.render('teachers/show', { teacher });
 };
-//editar
+//pagina editar
 exports.edit = function (req, res) {
     const { id } = req.params;
     const found = data.teachers.find((teacher, foundIndex) => {
@@ -72,7 +47,37 @@ exports.edit = function (req, res) {
 
     return res.render('teachers/edit', { teacher });
 };
-//salvar mudancas
+
+//criar
+exports.post = function (req, res) {
+    const keys = Object.keys(req.body);
+    for (const key of keys) if (req.body[key] == '') return res.send('Por favor, preencher todos os campos');
+    if (req.body.urlVerify == 'false') return res.send('Por favor, coloque o link de uma imagem valida');
+    if (!/^([a-zA-Z]+\s)*[a-zA-Z]+$/.test(req.body.name)) return res.send('Por favor, digite um nome valido');
+
+    let { avatar_url, name, birth, edu_level, education, knowledge } = req.body;
+
+    birth = Date.parse(birth);
+    const id = checkID();
+    const created_at = Date.now();
+    knowledge = knowledge.split(', ');
+
+    data.teachers.push({
+        id,
+        avatar_url,
+        name,
+        birth,
+        edu_level,
+        education,
+        knowledge,
+        created_at,
+    });
+    fs.writeFile('data.json', JSON.stringify(data, null, 4), (err) => {
+        if (err) return res.send('erro na escrita do arquivo');
+        return res.redirect('/professores');
+    });
+};
+//salvar
 exports.put = function (req, res) {
     let index = null;
 
@@ -100,7 +105,7 @@ exports.put = function (req, res) {
         return res.redirect(`/professores/${req.body.id}`);
     });
 };
-
+//deletar
 exports.delete = function (req, res) {
     const { id } = req.body;
     data.teachers = data.teachers.filter((teacher) => teacher.id != id);
@@ -110,6 +115,7 @@ exports.delete = function (req, res) {
     });
 };
 
+//funcoes extras
 function calcDate(timestamp) {
     const date = new Date(timestamp);
     const year = date.getUTCFullYear();
@@ -117,13 +123,23 @@ function calcDate(timestamp) {
     const day = ('0' + date.getUTCDate()).slice(-2);
     return `${year}-${month}-${day}`;
 }
-
 function calcAge(timestamp) {
     const age = Math.floor((new Date().getTime() - timestamp) / (1000 * 60 * 60 * 24 * 365));
     return age;
 }
-
 function calcSince(created_at) {
     const since = new Date(created_at);
     return since.getVarDate;
+}
+function checkID() {
+    for (let i = 0; true; i++) {
+        let valid = true;
+        for (let element of data.teachers) {
+            if (element.id == i) {
+                valid = false;
+                break;
+            }
+        }
+        if (valid) return i;
+    }
 }

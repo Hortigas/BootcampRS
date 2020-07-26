@@ -1,7 +1,21 @@
 .table-container {
     text-align: left;
     display: table;
-    height: auto;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    background-color: #18181b;
+    overflow: auto;
+}
+
+.table-container a#new {
+    background-color: #060627;
+    border-radius: 16px;
+
+    margin: 12px auto;
+    padding: 8px 60px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .table-container table {
@@ -42,7 +56,7 @@
     box-shadow: 0 2px 2px -2px #0f1116;
 }
 
-.table-container table tbody tr td:nth-child(2) {
+.table-container table tbody tr td:not(:first-child) {
     color: #a0a9b8;
 }
 
