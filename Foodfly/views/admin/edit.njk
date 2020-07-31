@@ -1,0 +1,58 @@
+{% extends "admin/layout.njk" %}
+
+{%block head %}
+   <link rel="stylesheet" href="/CSS/admin/form.css"/>
+   <title>Foodfy Nova Receita</title>
+{% endblock %}
+
+{% block content %}
+   <div id="content">
+      <div id="title">
+         <h2>Editando receita</h2>
+         <div>
+            <a onclick="document.getElementById('formDelete').submit();" class="red">Deletar</a>
+            <a onclick="document.getElementById('formEdit').submit();">Salvar receita</a>
+         </div>
+      </div>
+      <form id="formEdit" method="post" action="/admin/receitas?_method=PUT">
+         <div class="item">
+            <span>Imagem da receita</span>
+            <input type="url" name="image" value="{{recipe.image}}">
+         </div>
+         <div class="item">
+            <span>Nome da receita</span>
+            <input name="title" value="{{recipe.title}}">
+         </div>
+         <div class="item">
+            <span>Autor</span>
+            <input name="author" value="{{recipe.author}}">
+         </div>
+         <div class="item" id="itemIngredients">
+            <span>Ingredientes</span>
+            {% for ingredient in recipe.ingredients %}
+               <input name="ingredients[]" value="{{ingredient}}">
+            {% endfor %}
+            <h4 id="addIngredient">Adicionar novo ingrediente</h4>
+         </div>
+         <div class="item" id="itemPreparation">
+            <span>Modo de preparo</span>
+            {% for preparation in recipe.preparation %}
+               <input name="preparation[]" value="{{preparation}}">
+            {% endfor %}
+            <h4 id="addPreparation">Adicionar novo passo</h4>
+         </div>
+         <div class="item">
+            <span>Informações adicionais</span>
+            <textarea name="information" rows="15">{{recipe.information}}</textarea>
+         </div>
+         <input name="id" type="hidden" value="{{recipe.id}}">
+      </form>
+   </div>
+   <form id="formDelete" method="post" action="/admin/receitas?_method=DELETE">
+      <input type="hidden" name="id" value="{{recipe.id}}">
+   </form>
+{% endblock %}
+
+{% block scripts %}
+   <script src="/JS/newItem.js"></script>
+{% endblock %}

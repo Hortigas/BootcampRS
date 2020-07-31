@@ -2,8 +2,9 @@ const recipes = document.querySelectorAll('.item');
 
 for (const recipe of recipes) {
     recipe.addEventListener('click', () => {
-        const str = recipe.getAttribute('id');
-        const id = str.match(/(\d+)/);
-        window.location = `/receitas/${id[0]}`;
+        const id = recipe.getAttribute('id');
+        let currentPage = window.location.pathname;
+        if (currentPage.includes('receitas')) window.location = currentPage + `/${id}`;
+        else window.location = currentPage + `receitas/${id}`;
     });
 }

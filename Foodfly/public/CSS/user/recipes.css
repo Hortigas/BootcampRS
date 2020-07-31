@@ -1,7 +1,6 @@
-@import '/CSS/responsive.css';
-@import '/CSS/general.css';
-@import '/CSS/header.css';
-@import '/CSS/footer.css';
+@import '/CSS/general/general.css';
+@import '/CSS/user/header.css';
+@import '/CSS/user/footer.css';
 
 #content .catalog h2 {
     font-weight: bold;

@@ -1,15 +1,23 @@
-{% extends "layout.njk" %}
+{% extends "user/layout.njk" %}
 
 {%block head %}
-    <link rel="stylesheet" href="/CSS/recipes.css"/>
-    <title>Foodfy Receitas</title>
+    <link rel="stylesheet" href="/CSS/user/main-page.css"/>
+    <title>Foodfy</title>
 {% endblock %}
 
-{% block content %}
+{%block content %}
     <div id="content">
+        <div id="presentation">
+            <div id="text">
+                <h1>As melhores receitas</h1>
+                <h4>Aprenda a contruir os melhores pratos com receitas criadas por profissionais do mundo inteiro</h4>
+            </div>
+            <img src="/assets/chef.png" alt="Foodfy"/>
+        </div>
         <div class="catalog">
+            <h2>Mais acessadas</h2>
             <ul id="items">
-                {% for recipe in recipes %}
+                {% for recipe in topPicks %}
                     <li class="item" id="{{recipe.id}}">
                         <img src="{{recipe.image}}" alt="imagem de {{recipe.title}}"/>
                         <h3>{{recipe.title}}</h3>

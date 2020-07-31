@@ -1,8 +1,10 @@
-{% extends "layout.njk" %}
+{% extends "user/layout.njk" %}
 
 {%block head %}
-   <link rel="stylesheet" href="/CSS/showRecipe.css"/>
-   <title>Foodfy-{{recipe.title}}</title>
+   <link rel="stylesheet" href="/CSS/general/showRecipe.css"/>
+   <link rel="stylesheet" href="/CSS/user/header.css">
+   <title>Foodfy -
+      {{recipe.title}}</title>
 {% endblock %}
 
 {%block content %}

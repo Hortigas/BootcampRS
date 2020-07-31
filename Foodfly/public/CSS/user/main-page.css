@@ -1,7 +1,6 @@
-@import '/CSS/responsive.css';
-@import '/CSS/general.css';
-@import '/CSS/header.css';
-@import '/CSS/footer.css';
+@import '/CSS/general/general.css';
+@import '/CSS/user/header.css';
+@import '/CSS/user/footer.css';
 
 #content #presentation {
     align-items: center;
@@ -53,6 +52,7 @@
 #content .catalog #items .item {
     max-width: 300px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 #content .catalog #items .item img {

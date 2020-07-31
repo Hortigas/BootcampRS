@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      {% block head %}{% endblock %}
+   </head>
+   <body>
+      <header>
+         <div class="wrapper">
+            <div id="logo">
+               <a href="/admin/receitas"><img src="/assets/logoWhite.png" alt="Foodfy"/></a>
+            </div>
+         </div>
+      </header>
+
+      {% block content %}{% endblock %}
+      {% block scripts %}{% endblock %}
+   </body>
+</html>

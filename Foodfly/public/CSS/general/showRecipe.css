@@ -1,15 +1,36 @@
-@import '/CSS/responsive.css';
-@import '/CSS/general.css';
-@import '/CSS/header.css';
-@import '/CSS/footer.css';
+@import '/CSS/general/general.css';
+@import '/CSS/user/footer.css';
 
 #content {
     min-height: 100vh;
 }
 
+#content div#title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+#content #title a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: right;
+    text-decoration: none;
+
+    padding: 9px 20px;
+    background: #6558c3;
+    border-radius: 4px;
+    border-radius: 4px;
+    height: 37px;
+    cursor: pointer;
+}
+
 #content img {
     border-radius: 15px;
     margin: 10px 0px;
+    width: 100%;
 }
 
 #content h1,
